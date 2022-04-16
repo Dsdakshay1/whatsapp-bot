@@ -70,7 +70,7 @@ Asena.addCommand(
   }
 )
 
-Asena.addCommand({ on: "text", fromMe: false }, async (message, match) => {
+Asena.addCommand({ on: "hi", fromMe: true }, async (message, match) => {,'hello']
   let filtreler = await FilterDb.getFilter(message.jid)
   if (!filtreler) return
   filtreler.map(async (filter) => {
